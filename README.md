@@ -38,7 +38,7 @@ npm i express
 ```
 
 # Créer un script START dans package.json 
-```bash
+``` 
 "start": "nodemon ./src/index.ts"
 ```
 
@@ -57,4 +57,31 @@ Permet de ne pas synchroniser le node_modules avec git
 ```bash
 git add .
 git commit -m "0 - init espace de travail"
+```
+
+# Installation de TypeOrm
+
+```bash
+npm i typeorm
+npm install reflect-metadata --save
+npm install @types/node --save-dev
+npm install pg --save
+```
+
+# Installation de dotenv
+
+```bash
+npm i dotenv --save
+```
+
+# Installation de Bcrypt
+
+```bash
+npm install bcrypt
+```
+
+# Installation de JWT
+
+```bash
+npm install jsonwebtoken
 ```

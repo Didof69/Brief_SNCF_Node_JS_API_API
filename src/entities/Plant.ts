@@ -2,23 +2,21 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class Plant {
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @PrimaryGeneratedColumn()
-    id: number;
+  @Column()
+  nom: string;
 
-    @Column()
-    nom: string;
+  @Column()
+  soleil: string;
 
-    @Column()
-    soleil: string;
+  @Column()
+  arrosage: number;
 
-    @Column()
-    arrosage: string;
+  @Column()
+  categorie: string;
 
-    @Column()
-    categorie: string;
-
-    @Column()
-    image: string;
-    
+  @Column()
+  image: string;
 }

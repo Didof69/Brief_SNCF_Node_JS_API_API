@@ -18,7 +18,8 @@ Packages pour l'application :
 npm i express
 ```
 
-# Créer un fichier tsconfig.json et intégrer le code ci-dessous 
+# Créer un fichier tsconfig.json et intégrer le code ci-dessous
+
 ```bash
 {
   "compilerOptions": {
@@ -37,24 +38,31 @@ npm i express
   }
 ```
 
-# Créer un script START dans package.json 
+# Créer un script START dans package.json
+
 ```bash
 "start": "nodemon ./src/index.ts"
 ```
 
 # Initialisation d'un repo git local
+
 ```bash
 git init
 ```
 
 # Insérer node_modules dans .gitignore à la racine
+
 ```bash
 node_modules
 ```
+
 Permet de ne pas synchroniser le node_modules avec git
 
-# Synchro avec git
+<!-- # Synchro avec git
 ```bash
 git add .
-git commit -m "0 - init espace de travail"
+git commit -m "0 - init espace de travail" -->
+
+```
+
 ```

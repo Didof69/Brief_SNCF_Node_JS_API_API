@@ -40,7 +40,7 @@ npm i express
 
 # Créer un script START dans package.json
 
-```bash
+```
 "start": "nodemon ./src/index.ts"
 ```
 
@@ -61,8 +61,5 @@ Permet de ne pas synchroniser le node_modules avec git
 <!-- # Synchro avec git
 ```bash
 git add .
-git commit -m "0 - init espace de travail" -->
-
-```
-
+git commit -m "0 - init espace de travail"
 ```

@@ -1,5 +1,5 @@
 import { PlantService } from "../services/PlantService";
 
-export class Plantcontroller {
-    private plantService = new PlantService();
+export class PlantController {
+    private plantService = new PlantService
 }

@@ -16,3 +16,5 @@ const AppDataSource = new DataSource({
   logging: false,
   entities: [Plant, User],
 });
+
+export default AppDataSource;

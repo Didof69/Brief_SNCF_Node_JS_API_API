@@ -4,6 +4,10 @@ import { PlantController } from "../controllers/PlantController";
 const plantRouter = Router();
 const plantController = new PlantController();
 
+plantRouter.get("/", (request: Request, response: Response) => {
+  plantController.getAllPlants(request, response);
+});
+
 plantRouter.get("/:id", (request: Request, response: Response) => {
   plantController.getPlantById(request, response);
 });

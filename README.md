@@ -18,9 +18,7 @@ Packages pour l'application :
 npm i express
 ```
 
-# Créer un fichier tsconfig.json et intégrer le code ci-dessous 
-```bash
-{
+# Créer un fichier tsconfig.json et intégrer le code ci-dessou
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
     /* Language and Environment */
@@ -44,6 +42,7 @@ npm i express
 
 # Initialisation d'un repo git local
 ```bash
+
 git init
 ```
 

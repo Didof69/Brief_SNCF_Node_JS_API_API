@@ -1,7 +1,7 @@
 {
   "name": "step-by-step-api-book",
   "version": "1.0.0",
-  "description": "",
+  "description": "```bash\r npm init -y\r ```",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

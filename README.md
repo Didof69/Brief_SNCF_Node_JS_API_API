@@ -18,8 +18,7 @@ Packages pour l'application :
 npm i express
 ```
 
-# Créer un fichier tsconfig.json et intégrer le code ci-dessous
-
+# Créer un fichier tsconfig.json et intégrer le code ci-dessous 
 ```bash
 {
   "compilerOptions": {
@@ -38,29 +37,43 @@ npm i express
   }
 ```
 
-# Créer un script START dans package.json
-
-```
+# Créer un script START dans package.json 
+```bash
 "start": "nodemon ./src/index.ts"
 ```
 
 # Initialisation d'un repo git local
-
 ```bash
-
 git init
 ```
 
-# Insérer node_modules dans .gitignore à la racine
-
+# Créer un fichier .gitignore à la racine
 ```bash
 node_modules
 ```
-
 Permet de ne pas synchroniser le node_modules avec git
 
-<!-- # Synchro avec git
+# Synchro avec git
 ```bash
 git add .
 git commit -m "0 - init espace de travail"
 ```
+
+# Importer Express dans index.ts
+```
+import express from "express";
+```
+
+Installation de TypeOrm
+npm i typeorm
+npm install reflect-metadata --save
+npm install @types/node --save-dev
+npm install pg --save
+Installation de dotenv
+npm i dotenv --save
+Installation de Bcrypt
+npm install bcrypt
+npm i --save-dev @types/bcrypt
+Installation de JWT
+npm install jsonwebtoken
+npm i --save-dev @types/jsonwebtoken

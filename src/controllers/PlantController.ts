@@ -1,15 +1,10 @@
-import { Request } from "express-serve-static-core";
 import { PlantService } from "../services/PlantService";
-import { Response } from "express";
+import { Request, Response } from "express";
 
 export class PlantController {
     private plantService = new PlantService();
 
-
-
-
-
-  async getAllPlants(request: Request, response: Response) {
+    async getAllPlants(request: Request, response: Response) {
     const allBooks = await this.plantService.getAll();
     response.send({ status: "OK", data: allBooks });
   }
@@ -40,5 +35,11 @@ export class PlantController {
             return;
         }
         response.send({ status: "OK", data: updatedPlant});
+    }
+
+    async create(request: Request, response: Response) {
+        const body = request.body;
+        const createdPlant = await this.plantService.create(body.nom, body.soleil, body.arrosage, body.categorie, body.image);
+        response.send({ status: "OK", data: createdPlant });
     }
 }

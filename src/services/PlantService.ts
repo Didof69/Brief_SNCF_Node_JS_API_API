@@ -3,7 +3,7 @@ import { Plant } from "../entities/Plant";
 
 export class PlantService {
     private plantRepository = AppDataSource.getRepository(Plant);
-    
+
     getAll() {
         return this.plantRepository.find();
     }
@@ -28,5 +28,18 @@ export class PlantService {
     console.log(plantToUpdate);
  
     return this.plantRepository.save(plantToUpdate);
-    } 
+    }
+    
+    create(newNom: string, newSoleil: string, newArrosage: number, newCategorie: string, newImage: string) {
+        const newPlant = this.plantRepository.create({
+            nom: newNom,
+            soleil: newSoleil,
+            arrosage: newArrosage,
+            categorie: newCategorie,
+            image: newImage,
+        });
+console.log(newPlant);
+
+        return this.plantRepository.save(newPlant);
+    }
 }

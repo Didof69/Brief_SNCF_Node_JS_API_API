@@ -22,10 +22,10 @@ export class PlantController {
     response.send({ status: "OK", data: plant });
   }
 
-  update(request: Request, response: Response) {
+  async update(request: Request, response: Response) {
     const id = Number(request.params.id);
     const body = request.body;
-    const updatedPlant = this.plantService.update(
+    const updatedPlant = await this.plantService.update(
       id,
       body.nom,
       body.soleil,

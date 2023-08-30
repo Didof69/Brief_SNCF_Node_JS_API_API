@@ -35,7 +35,7 @@ export class PlantController {
         if (!updatedPlant) {
             response.status(404).send({
               status: "FAILED",
-              message: `la plante avec l'ide ${id} n'existe pas...`,  
+              message: `la plante avec l'id ${id} n'existe pas...`,  
             });
             return;
         }

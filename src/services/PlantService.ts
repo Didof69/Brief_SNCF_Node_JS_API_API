@@ -13,18 +13,20 @@ export class PlantService {
         return found;
     }
     
-   async update(id: number, newName: string, newSun: string, newWater: number, newCategory: string, newImage: string) {
-        const plantToUpdate = await this.plantRepository.preload({
-            id,
-            nom: newName,
-            soleil: newSun,
-            arrosage: newWater,
-            categorie: newCategory,
-            image: newImage,
-        } );
-        if(!plantToUpdate) {
-            return null;
-        }
-        return this.plantRepository.save(plantToUpdate);
-    }
+   async update(id: number, newNom: string, newSoleil: string, newArrosage: number, newCategorie: string, newImage: string) {
+
+    const plantToUpdate = await this.getById(id);
+
+    if(!plantToUpdate) { return null;}
+
+    plantToUpdate.nom = newNom;
+    plantToUpdate.soleil = newSoleil;
+    plantToUpdate.arrosage = newArrosage;
+    plantToUpdate.categorie = newCategorie;
+    plantToUpdate.image = newImage;
+
+    console.log(plantToUpdate);
+ 
+    return this.plantRepository.save(plantToUpdate);
+    } 
 }

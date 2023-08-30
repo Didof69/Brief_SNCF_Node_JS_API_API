@@ -12,6 +12,7 @@ plantRouter.get("/", (request: Request, response: Response) => {
 plantRouter.get("/:id", (request: Request, response: Response) => {
     plantController.getPlantById(request, response);
 });
+
 plantRouter.put("/:id", (request: Request, response: Response) => {
     plantController.update(request, response);
 });

@@ -21,12 +21,15 @@ const checkPlant = (
     return;
   }
 
-  if (isNaN(body.arrosage)||!body.arrosage){
-    response
-      .status(400)
-      .send({ status: "FAILED", message: `L'arrosage doit être un nombre ou.` });
-    return;
-  }
+ if (isNaN((body.arrosage)) || !body.arrosage  || (typeof body.arrosage === 'string' && body.arrosage.trim() === "")) {
+        response
+        .status(400)
+        .send({
+            status: "FAILED",
+            message: "La propriété arrosage est obligatoire et doit être un nombre."
+        }); 
+        return;
+    }
 
   if (!body.categorie || body.categorie.trim() === "") {
     response

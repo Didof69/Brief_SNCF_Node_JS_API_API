@@ -9,7 +9,7 @@ userRouter.post("/signup", (request: Request, response: Response) => {
   userController.signUp(request, response);
 });
 
-userRouter.post("/login", checkToken, (request: Request, response: Response) => {
+userRouter.post("/login", (request: Request, response: Response) => {
   userController.login(request, response);
 });
 

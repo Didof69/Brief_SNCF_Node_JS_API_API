@@ -38,7 +38,7 @@ npm i express
 ```
 
 # Créer un script START dans package.json 
-```bash
+``` 
 "start": "nodemon ./src/index.ts"
 ```
 
@@ -48,7 +48,7 @@ git init
 ```
 
 # Créer un fichier .gitignore à la racine
-```bash
+```
 node_modules
 ```
 Permet de ne pas synchroniser le node_modules avec git
@@ -64,16 +64,29 @@ git commit -m "0 - init espace de travail"
 import express from "express";
 ```
 
-Installation de TypeOrm
+
+# Installation de TypeOrm
+```bash
 npm i typeorm
 npm install reflect-metadata --save
 npm install @types/node --save-dev
 npm install pg --save
-Installation de dotenv
+```
+
+# Installation de dotenv
+```bash
 npm i dotenv --save
-Installation de Bcrypt
+```
+
+# Installation de Bcrypt
+```bash
 npm install bcrypt
 npm i --save-dev @types/bcrypt
-Installation de JWT
+```
+
+# Installation de jsonwebtoken
+```bash
 npm install jsonwebtoken
 npm i --save-dev @types/jsonwebtoken
+```
+

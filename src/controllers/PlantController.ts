@@ -5,8 +5,8 @@ export class PlantController {
   private plantService = new PlantService();
 
   async getAllPlants(request: Request, response: Response) {
-    const allBooks = await this.plantService.getAll();
-    response.send({ status: "OK", data: allBooks });
+    const allPlants = await this.plantService.getAll();
+    response.send({ status: "OK", data: allPlants });
   }
 
   async getPlantById(request: Request, response: Response) {
@@ -44,7 +44,9 @@ export class PlantController {
   }
 
   async create(request: Request, response: Response) {
+
     const body = request.body;
+    console.log('au niveau back => '+body)
     const createdPlant = await this.plantService.create(
       body.nom,
       body.soleil,

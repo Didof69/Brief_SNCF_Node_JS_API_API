@@ -28,7 +28,8 @@ export class UserController {
       response.status(500).send({ status: "FAILED", message: "Oups..." });
       return;
     }
-
+    // console.log("ok login");
+    
     response.send({ status: "OK", data: token });
   }
 }

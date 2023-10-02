@@ -21,7 +21,7 @@ const checkPlant = (
     return;
   }
 
- if (isNaN((body.arrosage)) || !body.arrosage  || (typeof body.arrosage === 'string' && body.arrosage.trim() === "")) {
+ if (isNaN((body.arrosage))) {
         response
         .status(400)
         .send({

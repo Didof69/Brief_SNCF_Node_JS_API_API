@@ -52,7 +52,7 @@ export class PlantService {
       categorie: newCategorie,
       image: newImage,
     });
-    console.log(newPlant);
+    console.log("le token est passé et voici la plante", newPlant);
 
     return this.plantRepository.save(newPlant);
   }
